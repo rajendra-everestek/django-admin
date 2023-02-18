@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 #
-sudo rm -rf /home/ubuntu/djangoadmin/*
+# sudo rm -rf /home/ubuntu/djangoadmin/*
