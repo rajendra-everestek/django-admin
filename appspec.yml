@@ -8,10 +8,10 @@ version: 0.0
         owner: ubuntu
         group: ubuntu
     hooks:
-    # BeforeInstall:
-    #     - location: scripts/clean_instance.sh
-    #         timeout: 300
-    #         runas: ubuntu
+    BeforeInstall:
+        - location: scripts/clean_instance.sh
+            timeout: 300
+            runas: ubuntu
     AfterInstall:
         - location: scripts/instance_os_dependencies.sh
             timeout: 300
