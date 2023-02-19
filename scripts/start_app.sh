@@ -5,6 +5,7 @@ sed -i 's/\[]/\["44.203.31.45"]/' /home/ubuntu/djangoadmin/djangoadmin/settings.
 python manage.py migrate 
 python manage.py makemigrations     
 python manage.py collectstatic
+pip3 install gunicorn
 sudo service gunicorn restart
 sudo service nginx restart
 #sudo tail -f /var/log/nginx/error.log
