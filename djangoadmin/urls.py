@@ -20,5 +20,6 @@ from cicd.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('cicd', cicd, name='home')
+    path('cicd', cicd, name='home'),
+    path('rajendra', rajendra, name='home')
 ]
