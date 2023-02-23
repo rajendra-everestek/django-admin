@@ -5,7 +5,7 @@ pipeline{
             steps  {
                 sh '''
                 chmod +x clean_instance.sh
-                sh ./scripts/clean_instance.sh
+                ./clean_instance.sh
                 '''
             }
         }
@@ -14,7 +14,7 @@ pipeline{
             steps  {
                 sh '''
                 chmod +x instance_os_dependencies.sh
-                scripts/instance_os_dependencies.sh
+                ./instance_os_dependencies.sh
                 '''
             }
         }
@@ -23,7 +23,7 @@ pipeline{
             steps  {
                 sh '''
                 chmod +x python_dependencies.sh
-                scripts/python_dependencies.sh
+                ./python_dependencies.sh
                 '''
             }
         }
@@ -32,7 +32,7 @@ pipeline{
             steps  {
                 sh '''
                 chmod +x gunicorn.sh
-                scripts/gunicorn.sh
+                ./gunicorn.sh
                 '''
             }
         }
@@ -41,7 +41,7 @@ pipeline{
             steps  {
                 sh '''
                 chmod +x nginx.sh
-                scripts/nginx.sh
+                ./nginx.sh
                 '''
             }
         }
@@ -50,7 +50,7 @@ pipeline{
             steps  {
                 sh '''
                 chmod +x stop_app.sh
-                scripts/stop_app.sh
+                ./stop_app.sh
                 '''
             }
         }
@@ -59,7 +59,7 @@ pipeline{
             steps  {
                 sh '''
                 chmod +x start_app.sh
-                scripts/start_app.sh
+                ./start_app.sh
                 '''
             }
         }
@@ -68,7 +68,7 @@ pipeline{
         //     steps {
         //         sh '''
         //         chmod +x gunicorn.sh
-        //         scripts/gunicorn.sh
+        //         ./gunicorn.sh
         //         '''
         //     }
         // }
@@ -76,7 +76,7 @@ pipeline{
         //     steps {
         //         sh '''
         //         chmod +x nginx.sh
-        //         scripts/nginx.sh
+        //         ./nginx.sh
         //         '''
         //     }
         // }
