@@ -15,11 +15,11 @@ echo "Migrations done"
 
 cd /var/lib/jenkins/workspace/Django-Admin
 
-sudo cp /var/lib/jenkins/workspace/Django-Admin/scripts/gunicorn.socket /etc/systemd/system/gunicorn.socket
-sudo cp /var/lib/jenkins/workspace/Django-Admin/scripts/gunicorn.service /etc/systemd/system/gunicorn.service
+cp /var/lib/jenkins/workspace/Django-Admin/scripts/gunicorn.socket /etc/systemd/system/gunicorn.socket
+cp /var/lib/jenkins/workspace/Django-Admin/scripts/gunicorn.service /etc/systemd/system/gunicorn.service
 
-sudo systemctl start gunicorn.service
-sudo systemctl enable gunicorn.service
+systemctl start gunicorn.service
+systemctl enable gunicorn.service
 
 # sudo cp -rf ./scripts/gunicorn.socket /etc/systemd/system/
 # sudo cp -rf ./scripts/gunicorn.service /etc/systemd/system/
