@@ -14,7 +14,7 @@ pipeline{
             steps {
                 sh '''
                 chmod +x gunicorn.sh
-                ./gunicorn.sh
+                ./scripts/gunicorn.sh
                 '''
             }
         }
@@ -22,7 +22,7 @@ pipeline{
             steps {
                 sh '''
                 chmod +x nginx.sh
-                ./nginx.sh
+                ./scripts/nginx.sh
                 '''
             }
         }
