@@ -3,7 +3,7 @@
 python3 -m venv env
 source env/bin/activate
 
-cd /home/ubuntu/djangoadmin
+cd /var/lib/jenkins/workspace/Django-Admin
 
 pip3 install -r requirements.txt
 
@@ -13,7 +13,7 @@ python3 manage.py collectstatic -- no-input
 
 echo "Migrations done"
 
-cd /home/ubuntu/djangoadmin
+cd /var/lib/jenkins/workspace/Django-Admin
 
 cp -rf gunicorn.socket /etc/systemd/system/
 cp -rf gunicorn.service /etc/systemd/system/
