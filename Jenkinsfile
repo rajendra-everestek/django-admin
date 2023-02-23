@@ -1,20 +1,11 @@
 pipeline{
     agent any
     stages {
-        stage('Clean instance'){
-            steps  {
-                sh '''
-                chmod +x clean_instance.sh
-                ./clean_instance.sh
-                '''
-            }
-        }
-
-        // stage('Instance os Dependencies'){
+        // stage('Clean instance'){
         //     steps  {
         //         sh '''
-        //         chmod +x instance_os_dependencies.sh
-        //         ./instance_os_dependencies.sh
+        //         chmod +x clean_instance.sh
+        //         ./clean_instance.sh
         //         '''
         //     }
         // }
