@@ -1,6 +1,9 @@
 #!/bin/bash
 
+python3 -m venv env
 source env/bin/activate
+
+pip3 install -r requirements.txt
 
 cd /var/lib/jenkins/workspace/Django-Admin
 
