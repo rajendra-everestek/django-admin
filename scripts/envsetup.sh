@@ -4,13 +4,8 @@ if [ -d "env" ]
 then
     echo "Python virtual environment exists." 
 else
-    python3 -m venv env
+    sudo apt install python3-venv -y
 fi
-
-source env/bin/activate
-
-
-pip3 install -r requirements.txt
 
 if [ -d "logs" ] 
 then
@@ -20,4 +15,4 @@ else
     touch logs/error.log logs/access.log
 fi
 
-sudo chmod -R 777 logs
+chmod -R 777 logs

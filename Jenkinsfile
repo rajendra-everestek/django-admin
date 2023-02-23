@@ -3,12 +3,12 @@ pipeline{
     stages {
     
         stage('Setup Python Virtual ENV'){
-       
-      steps  {
-            sh '''
-            chmod +x envsetup.sh
-            ./envsetup.sh
-            '''}
+            steps  {
+                sh '''
+                chmod +x envsetup.sh
+                sh ./scripts/envsetup.sh
+                '''
+            }
         }
         stage('Setup Gunicorn Setup'){
             steps {
@@ -22,7 +22,7 @@ pipeline{
             steps {
                 sh '''
                 chmod +x nginx.sh
-                ./nginx.sh
+                sh ./scripts/nginx.sh
                 '''
             }
         }
