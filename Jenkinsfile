@@ -1,0 +1,84 @@
+pipeline{
+    agent any
+    stages {
+        stage('Clean instance'){
+            steps  {
+                sh '''
+                chmod +x clean_instance.sh
+                scripts/clean_instance.sh
+                '''
+            }
+        }
+
+        stage('Instance os Dependencies'){
+            steps  {
+                sh '''
+                chmod +x instance_os_dependencies.sh
+                scripts/instance_os_dependencies.sh
+                '''
+            }
+        }
+
+        stage('Python Dependencies'){
+            steps  {
+                sh '''
+                chmod +x python_dependencies.sh
+                scripts/python_dependencies.sh
+                '''
+            }
+        }
+
+        stage('Setup Gunicorn Setup'){
+            steps  {
+                sh '''
+                chmod +x gunicorn.sh
+                scripts/gunicorn.sh
+                '''
+            }
+        }
+
+        stage('setup NGINX'){
+            steps  {
+                sh '''
+                chmod +x nginx.sh
+                scripts/nginx.sh
+                '''
+            }
+        }
+
+        stage('Stop Application'){
+            steps  {
+                sh '''
+                chmod +x stop_app.sh
+                scripts/stop_app.sh
+                '''
+            }
+        }
+
+        stage('Start Application'){
+            steps  {
+                sh '''
+                chmod +x start_app.sh
+                scripts/start_app.sh
+                '''
+            }
+        }
+        
+        // stage('Setup Gunicorn Setup'){
+        //     steps {
+        //         sh '''
+        //         chmod +x gunicorn.sh
+        //         scripts/gunicorn.sh
+        //         '''
+        //     }
+        // }
+        // stage('setup NGINX'){
+        //     steps {
+        //         sh '''
+        //         chmod +x nginx.sh
+        //         scripts/nginx.sh
+        //         '''
+        //     }
+        // }
+    }
+}
