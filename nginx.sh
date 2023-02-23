@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cp -rf app.conf /etc/nginx/sites-available/app
-chmod 710 /var/lib/jenkins/workspace/djangoadmin
+chmod 710 /var/lib/jenkins/workspace/Django-Admin
 
 ln -s /etc/nginx/sites-available/app /etc/nginx/sites-enabled
 nginx -t
