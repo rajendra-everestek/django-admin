@@ -10,6 +10,15 @@ pipeline{
             }
         }
 
+        // stage('Instance os Dependencies'){
+        //     steps  {
+        //         sh '''
+        //         chmod +x instance_os_dependencies.sh
+        //         ./instance_os_dependencies.sh
+        //         '''
+        //     }
+        // }
+
         stage('Instance os Dependencies'){
             steps  {
                 sh '''
