@@ -4,8 +4,8 @@ pipeline{
         stage('Setup Python Virtual ENV'){
             steps  {
                 sh '''
-                chmod +x clean_instance.sh
-                scripts/clean_instance.sh
+                chmod +x ./scripts/clean_instance.sh
+                ./scripts/clean_instance.sh
                 '''
             }
         }
