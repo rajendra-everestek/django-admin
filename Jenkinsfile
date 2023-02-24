@@ -5,7 +5,7 @@ pipeline{
             steps  {
                 sh '''
                 chmod +x ./scripts/clean_instance.sh
-                ./scripts/clean_instance.sh
+                 sh ./scripts/clean_instance.sh
                 '''
             }
         }
