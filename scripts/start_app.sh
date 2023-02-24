@@ -2,6 +2,9 @@
 
 sed -i 's/\[]/\["3.235.49.81"]/' /var/lib/jenkins/workspace/Django-Admin/djangoadmin/settings.py
 
+source /home/ubuntu/env/bin/activate
+cd /var/lib/jenkins/workspace/Django-Admin
+
 python manage.py migrate 
 python manage.py makemigrations     
 python manage.py collectstatic
