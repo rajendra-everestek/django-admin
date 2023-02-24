@@ -1,27 +1,27 @@
 pipeline{
     agent any
     stages {
-        stage('Setup Python Virtual ENV'){
+        stage('clean_instance'){
             steps  {
                 sh '''
-                chmod +x envsetup.sh
-                ./envsetup.sh
+                chmod +x clean_instance.sh
+                ./clean_instance.sh
                 '''
             }
         }
-        stage('Setup Gunicorn Setup'){
+        stage('instance_os_dependencies'){
             steps {
                 sh '''
-                chmod +x gunicorn.sh
-                ./gunicorn.sh
+                chmod +x instance_os_dependencies.sh
+                ./instance_os_dependencies.sh
                 '''
             }
         }
         stage('setup NGINX'){
             steps {
                 sh '''
-                chmod +x nginx.sh
-                ./nginx.sh
+                chmod +x python_dependencies.sh
+                ./python_dependencies.sh
                 '''
             }
         }
