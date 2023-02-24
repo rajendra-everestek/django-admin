@@ -8,9 +8,9 @@ source /home/ubuntu/env/bin/activate
 pip3 install gunicorn
 pip3 install -r /var/lib/jenkins/workspace/Django-Admin/requirements.txt
 
-python manage.py migrate 
-python manage.py makemigrations
-python manage.py collectstatic
+python3 manage.py migrate 
+python3 manage.py makemigrations
+python3 manage.py collectstatic
 
 pip3 install gunicorn
 sudo service gunicorn restart
