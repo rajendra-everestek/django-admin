@@ -3,7 +3,7 @@ pipeline{
     stages {
         stage('Setup Python Virtual ENV'){
             steps  {
-                sudo sh '''
+                sh '''
                 chmod +x ./scripts/clean_instance.sh
                 ./scripts/clean_instance.sh
                 '''
