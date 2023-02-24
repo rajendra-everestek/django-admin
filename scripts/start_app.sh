@@ -11,6 +11,8 @@ source /var/lib/jenkins/workspace/env1/bin/activate
 pip3 install gunicorn
 pip3 install -r /var/lib/jenkins/workspace/Django-Admin/requirements.txt
 
+cd /var/lib/jenkins/workspace/Django-Admin/
+
 python3 manage.py migrate 
 python3 manage.py makemigrations
 
