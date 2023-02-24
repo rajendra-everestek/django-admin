@@ -9,14 +9,14 @@ pipeline{
                 '''
             }
         }
-        stage('Setup Python Virtual ENV'){
-            steps  {
-                sh '''
-                chmod +x ./scripts/instance_os_dependencies.sh
-                sh ./scripts/instance_os_dependencies.sh
-                '''
-            }
-        }
+        // stage('Setup Python Virtual ENV'){
+        //     steps  {
+        //         sh '''
+        //         chmod +x ./scripts/instance_os_dependencies.sh
+        //         sh ./scripts/instance_os_dependencies.sh
+        //         '''
+        //     }
+        // }
         // stage('Setup Gunicorn Setup'){
         //     steps {
         //         sh '''
