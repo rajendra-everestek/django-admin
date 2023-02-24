@@ -1,7 +1,7 @@
 pipeline{
     agent any
     stages {
-        stage('Setup Python Virtual ENV'){
+        stage('Clean Instance'){
             steps  {
                 sh '''
                 chmod +x ./scripts/clean_instance.sh
