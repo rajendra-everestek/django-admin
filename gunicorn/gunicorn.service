@@ -5,8 +5,8 @@ After=network.target
 [Service]
 User=ubuntu
 Group=www-data
-WorkingDirectory=/home/ubuntu/djangoadmin
-ExecStart=/home/ubuntu/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/ubuntu/djangoadmin/djangoadmin/djangoadmin.sock djangoadmin.wsgi:application
+WorkingDirectory=/var/lib/jenkins/workspace/Django-Admin
+ExecStart=/home/ubuntu/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/var/lib/jenkins/workspace/Django-Admin/djangoadmin/djangoadmin.sock djangoadmin.wsgi:application
 
        
 [Install]

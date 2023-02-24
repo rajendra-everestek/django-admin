@@ -1,6 +1,6 @@
 #!/usr/bin/bash 
 
-sed -i 's/\[]/\["44.203.31.45"]/' /home/ubuntu/djangoadmin/djangoadmin/settings.py
+sed -i 's/\[]/\["44.203.31.45"]/' /var/lib/jenkins/workspace/Django-Admin/djangoadmin/settings.py
 
 python manage.py migrate 
 python manage.py makemigrations     
