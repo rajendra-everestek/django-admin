@@ -7,9 +7,10 @@ source /home/ubuntu/env/bin/activate
 cd /var/lib/jenkins/workspace/Django-Admin
 
 pip3 install -r requirements.txt
-python3 manage.py migrate 
-python3 manage.py makemigrations     
-python3 manage.py collectstatic
+python manage.py migrate 
+python manage.py makemigrations
+python manage.py collectstatic
+
 pip3 install gunicorn
 sudo service gunicorn restart
 sudo service nginx restart
