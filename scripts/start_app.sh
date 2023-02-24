@@ -3,13 +3,13 @@
 sed -i 's/\[]/\["3.235.49.81"]/' /var/lib/jenkins/workspace/Django-Admin/djangoadmin/settings.py
 
 
-sudo apt install -y python3-venv
+# sudo apt install -y python3-venv
 
-python3 -m venv /var/lib/jenkins/workspace/env1
-source /var/lib/jenkins/workspace/env1/bin/activate
+# python3 -m venv /var/lib/jenkins/workspace/env1
+# source /var/lib/jenkins/workspace/env1/bin/activate
 
-pip3 install gunicorn
-pip3 install -r /var/lib/jenkins/workspace/Django-Admin/requirements.txt
+# pip3 install gunicorn
+# pip3 install -r /var/lib/jenkins/workspace/Django-Admin/requirements.txt
 
 cd /var/lib/jenkins/workspace/Django-Admin/
 
