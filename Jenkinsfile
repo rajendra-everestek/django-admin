@@ -1,59 +1,28 @@
 pipeline{
     agent any
     stages {
-        stage('Clean Instance'){
+    
+        stage('Setup Python Virtual ENV'){
             steps  {
                 sh '''
-                chmod +x ./scripts/clean_instance.sh
-                ./scripts/clean_instance.sh
+                chmod +x ./scripts/envsetup.sh
+                ./scripts/envsetup.sh
                 '''
             }
         }
-        stage('Instance OS Dependencies'){
-            steps  {
-                sh '''
-                chmod +x ./scripts/instance_os_dependencies.sh
-                ./scripts/instance_os_dependencies.sh
-                '''
-            }
-        }
-        stage('Python Dependencies'){
-            steps  {
-                sh '''
-                chmod +x ./scripts/python_dependencies.sh
-                ./scripts/python_dependencies.sh
-                '''
-            }
-        }
-        stage('Gunicorn'){
-            steps  {
+        stage('Setup Gunicorn Setup'){
+            steps {
                 sh '''
                 chmod +x ./scripts/gunicorn.sh
                 ./scripts/gunicorn.sh
                 '''
             }
         }
-        stage('Nginx'){
-            steps  {
+        stage('setup NGINX'){
+            steps {
                 sh '''
                 chmod +x ./scripts/nginx.sh
                 ./scripts/nginx.sh
-                '''
-            }
-        }
-        stage('Stop App'){
-            steps  {
-                sh '''
-                chmod +x ./scripts/stop_app.sh
-                ./scripts/stop_app.sh
-                '''
-            }
-        }
-        stage('Start App'){
-            steps  {
-                sh '''
-                chmod +x ./scripts/start_app.sh
-                ./scripts/start_app.sh
                 '''
             }
         }
