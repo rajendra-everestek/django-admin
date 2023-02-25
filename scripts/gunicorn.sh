@@ -4,6 +4,8 @@ source env/bin/activate
 
 cd /var/lib/jenkins/workspace/Django-Admin
 
+pip3 install gunicorn
+
 python3 manage.py makemigrations
 python3 manage.py migrate
 python3 manage.py collectstatic -- no-input
