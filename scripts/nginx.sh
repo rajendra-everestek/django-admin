@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo cp -rf ./app.conf /etc/nginx/sites-available/Django-Admin
+sudo cp -rf /var/lib/jenkins/workspace/Django-Admin/scripts/app.conf /etc/nginx/sites-available/Django-Admin
 chmod 710 /var/lib/jenkins/workspace/Django-Admin
 
 sudo ln -s /etc/nginx/sites-available/Django-Admin /etc/nginx/sites-enabled
