@@ -12,8 +12,8 @@ echo "Migrations done"
 
 cd /var/lib/jenkins/workspace/Django-Admin
 
-sudo cp -rf ./scripts/gunicorn.socket /etc/systemd/system/
-sudo cp -rf ./scripts/gunicorn.service /etc/systemd/system/
+sudo cp -rf /var/lib/jenkins/workspace/Django-Admin/scripts/gunicorn.socket /etc/systemd/system/
+sudo cp -rf /var/lib/jenkins/workspace/Django-Admin/scripts/gunicorn.service /etc/systemd/system/
 
 echo "$USER"
 echo "$PWD"
