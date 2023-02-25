@@ -1,6 +1,6 @@
 #!/usr/bin/bash 
 
-sed -i 's/\[]/\["172.31.4.242"]/' /var/lib/jenkins/workspace/Django-Admin/djangoadmin/settings.py
+sed -i 's/\[]/\["3.235.9.158"]/' /var/lib/jenkins/workspace/Django-Admin/djangoadmin/settings.py
 
 
 # sudo apt install -y python3-venv
