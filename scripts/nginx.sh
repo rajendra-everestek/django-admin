@@ -1,5 +1,8 @@
 #!/bin/bash
 
+sudo apt update
+sudo apt install nginx
+
 sudo cp -rf /var/lib/jenkins/workspace/Django-Admin/scripts/app.conf /etc/nginx/sites-available/Django-Admin
 chmod 710 /var/lib/jenkins/workspace/Django-Admin
 
